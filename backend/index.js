@@ -7,7 +7,7 @@ const app = express();
 const port = 4000;
 
 // Middleware
-app.use(bodyParser.json({ limit: '10mb' })); // To handle large base64 strings
+app.use(bodyParser.json({ limit: '100mb' })); // To handle large base64 strings
 app.use(cors())
 
 // Email configuration
@@ -32,7 +32,7 @@ app.post('/send-email', (req, res) => {
 
   // Define the mail options
   const mailOptions = {
-    from: 'your-email@gmail.com',
+    from: 'pictureofevent360@gmail.com',
     to: to,
     subject: "Your AI Avatar",
     text: "Hi, please find the attachement below",
