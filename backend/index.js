@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors')
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;;
 
 // Middleware
 app.use(bodyParser.json({ limit: '100mb' })); // To handle large base64 strings
