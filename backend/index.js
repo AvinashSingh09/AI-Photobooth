@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
 app.post('/send-email', (req, res) => {
   const { to, image } = req.body;
 
-  if (!to || !base64Image) {
+  if (!to || !image) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
