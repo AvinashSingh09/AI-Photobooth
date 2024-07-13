@@ -19,6 +19,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+ app.get("/",(req,res) =>{
+          res.send("This is sunning");
+  })
+
 // Endpoint to send email with attachment
 app.post('/send-email', (req, res) => {
   const { to, base64Image } = req.body;
@@ -44,6 +48,8 @@ app.post('/send-email', (req, res) => {
       },
     ],
   };
+
+ 
 
   // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
