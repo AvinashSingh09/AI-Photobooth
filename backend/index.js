@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 
 // Endpoint to collect and save name and email
 app.post('/save-person', async (req, res) => {
-  const { name, email } = req.body;
+  const { name, email,number,company } = req.body;
 
   if (!name || !email) {
     return res.status(400).json({ message: 'Name and email are required' });
@@ -46,7 +46,7 @@ app.post('/save-person', async (req, res) => {
 
   try {
     // Save data to MongoDB
-    const personData = new Person({ name, email });
+    const personData = new Person({ name, email,number,company });
     await personData.save();
     return res.status(201).json({ message: 'Data saved successfully' });
   } catch (error) {
