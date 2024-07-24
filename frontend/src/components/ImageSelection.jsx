@@ -1,15 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import male1 from '../assets/male1.jpeg';
-import male2 from '../assets/male2.jpeg';
-import female1 from '../assets/girl1.jpeg';
-import female2 from '../assets/girl2.jpeg';
+import male1 from '../assets/Male1.png';
+import male2 from '../assets/Male2.png';
+import male3 from '../assets/Male3.png';
+import female1 from '../assets/Female1.png';
+import female2 from '../assets/Female2.png';
+import female3 from '../assets/Female3.png';
 
 const ImageSelection = ({ gender, setTargetImage }) => {
   const navigate = useNavigate();
   const images = gender === 'male'
-    ? [male1, male2]
-    : [female1, female2];
+    ? [male1, male2, male3]
+    : [female1, female2, female3];
 
   const handleImageSelect = (image) => {
     convertToPngIfNeeded(image).then(base64Image => {

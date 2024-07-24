@@ -76,7 +76,7 @@ const App = () => {
       "source_folder": "",
     };
 
-    axios.post('https://7b910184a20104a7d0.gradio.live/reactor/image', payload, {
+    axios.post(' https://88f6a9df7f46ab5a50.gradio.live/reactor/image', payload, {
       headers: {
         'Content-Type': 'application/json'
       }
